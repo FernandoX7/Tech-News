@@ -8,6 +8,10 @@ public class Article {
 
     private String title, description, author;
 
+    public Article() {
+
+    }
+
     public Article(String title, String description, String author) {
         this.title = title;
         this.description = description;
