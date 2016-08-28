@@ -82,19 +82,19 @@ public class NewsActivity extends AppCompatActivity {
     }
 
     private void prepareTestingArticleData() {
-        Article article = new Article("Article Title", "Article Description");
+        Article article = new Article("Article Title", "Article Description", "username");
         articlesList.add(article);
 
-        article = new Article("Article Title 2", "Article Description 2");
+        article = new Article("Article Title 2", "Article Description 2", "username");
         articlesList.add(article);
 
-        article = new Article("Article Title 3", "Article Description 3");
+        article = new Article("Article Title 3", "Article Description 3", "username");
         articlesList.add(article);
 
-        article = new Article("Article Title 4", "Article Description 4");
+        article = new Article("Article Title 4", "Article Description 4", "username");
         articlesList.add(article);
 
-        article = new Article("Article Title 5", "Article Description 5");
+        article = new Article("Article Title 5", "Article Description 5", "username");
         articlesList.add(article);
 
         articlesAdapter.notifyDataSetChanged();

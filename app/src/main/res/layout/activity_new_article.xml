@@ -15,13 +15,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter title"
-        android:id="@+id/title_edit_text"/>
+        android:id="@+id/article_title_edit_text"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter description"
-        android:id="@+id/description_edit_text"/>
+        android:id="@+id/article_description_edit_text"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
