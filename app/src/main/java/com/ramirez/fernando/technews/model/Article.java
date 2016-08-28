@@ -6,14 +6,12 @@ package com.ramirez.fernando.technews.model;
 
 public class Article {
 
-    private String title, description;
+    private String title, description, author;
 
-    public Article() {
-    }
-
-    public Article(String title, String description) {
+    public Article(String title, String description, String author) {
         this.title = title;
         this.description = description;
+        this.author = author;
     }
 
     public String getTitle() {
@@ -30,5 +28,22 @@ public class Article {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    @Override
+    public String toString() {
+        return "Article{" +
+                "title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", author='" + author + '\'' +
+                '}';
     }
 }

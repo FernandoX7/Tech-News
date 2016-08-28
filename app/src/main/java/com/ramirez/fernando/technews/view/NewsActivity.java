@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import com.ramirez.fernando.technews.model.Article;
 import com.ramirez.fernando.technews.adapter.ArticlesAdapter;
 import com.ramirez.fernando.technews.R;
+import com.ramirez.fernando.technews.view.newArticle.NewArticle;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,28 +69,32 @@ public class NewsActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.action_profile) {
-            startActivity(new Intent(this, ProfileActivity.class));
-            return true;
+        switch (id) {
+            case R.id.action_profile:
+                startActivity(new Intent(this, ProfileActivity.class));
+                return true;
+            case R.id.action_new_article:
+                startActivity(new Intent(this, NewArticle.class));
+                return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
 
     private void prepareTestingArticleData() {
-        Article article = new Article("Article Title", "Article Description");
+        Article article = new Article("Article Title", "Article Description", "username");
         articlesList.add(article);
 
-        article = new Article("Article Title 2", "Article Description 2");
+        article = new Article("Article Title 2", "Article Description 2", "username");
         articlesList.add(article);
 
-        article = new Article("Article Title 3", "Article Description 3");
+        article = new Article("Article Title 3", "Article Description 3", "username");
         articlesList.add(article);
 
-        article = new Article("Article Title 4", "Article Description 4");
+        article = new Article("Article Title 4", "Article Description 4", "username");
         articlesList.add(article);
 
-        article = new Article("Article Title 5", "Article Description 5");
+        article = new Article("Article Title 5", "Article Description 5", "username");
         articlesList.add(article);
 
         articlesAdapter.notifyDataSetChanged();
