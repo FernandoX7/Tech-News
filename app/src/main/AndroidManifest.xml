@@ -46,6 +46,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".view.NewsActivity"/>
         </activity>
+        <activity android:name=".view.newArticle.NewArticle">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.NewsActivity"/>
+        </activity>
     </application>
 
 </manifest>
