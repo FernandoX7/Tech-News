@@ -37,3 +37,4 @@ obj/
 
 # Firebase google-services
 google-services.json
+Constants.java
