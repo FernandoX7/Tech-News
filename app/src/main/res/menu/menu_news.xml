@@ -13,4 +13,10 @@
         android:orderInCategory="100"
         android:title="New Article"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_sign_out"
+        android:orderInCategory="300"
+        android:title="Sign out"
+        app:showAsAction="never" />
 </menu>
