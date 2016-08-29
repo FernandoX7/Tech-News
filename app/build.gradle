@@ -39,6 +39,9 @@ dependencies {
 
     // Blur ImageView
     compile 'ru.egslava:blurredview:1.0'
+
+    // Image Downloading and parsing
+    compile 'com.squareup.picasso:picasso:2.5.2'
 }
 
 apply plugin: 'com.google.gms.google-services'
