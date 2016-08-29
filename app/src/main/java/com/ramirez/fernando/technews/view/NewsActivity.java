@@ -146,19 +146,19 @@ public class NewsActivity extends AppCompatActivity {
     }
 
     private void prepareTestingArticleData() {
-        Article article = new Article("Article Title", "Article Description", "username");
+        Article article = new Article("Article Title", "Article Description", "username", "image", "\"Aug 37, 2016 6:55:14 PM\"");
         articlesList.add(article);
 
-        article = new Article("Article Title 2", "Article Description 2", "username");
+        article = new Article("Article Title 2", "Article Description 2", "username", "image", "\"Aug 37, 2016 7:55:14 PM\"");
         articlesList.add(article);
 
-        article = new Article("Article Title 3", "Article Description 3", "username");
+        article = new Article("Article Title 3", "Article Description 3", "username", "image", "\"Aug 37, 2016 8:55:14 PM\"");
         articlesList.add(article);
 
-        article = new Article("Article Title 4", "Article Description 4", "username");
+        article = new Article("Article Title 4", "Article Description 4", "username", "image", "\"Aug 37, 2016 9:55:14 PM\"");
         articlesList.add(article);
 
-        article = new Article("Article Title 5", "Article Description 5", "username");
+        article = new Article("Article Title 5", "Article Description 5", "username", "image", "\"Aug 37, 2016 10:55:14 PM\"");
         articlesList.add(article);
 
         refreshAdapter();

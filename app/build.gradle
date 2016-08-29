@@ -11,6 +11,8 @@ android {
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
+        renderscriptTargetApi 23
+        renderscriptSupportModeEnabled true
     }
     buildTypes {
         release {
@@ -34,6 +36,9 @@ dependencies {
     compile 'com.google.firebase:firebase-database:9.4.0'
     compile 'com.firebase:firebase-client-android:2.4.0'
     compile "com.google.firebase:firebase-auth:9.4.0"
+
+    // Blur ImageView
+    compile 'ru.egslava:blurredview:1.0'
 }
 
 apply plugin: 'com.google.gms.google-services'

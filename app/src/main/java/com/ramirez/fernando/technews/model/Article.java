@@ -6,16 +6,25 @@ package com.ramirez.fernando.technews.model;
 
 public class Article {
 
-    private String title, description, author;
+    private String title, description, author, image, timestamp;
 
-    public Article() {
+    public Article() {}
 
-    }
-
-    public Article(String title, String description, String author) {
+    // With image
+    public Article(String title, String description, String author, String image, String timestamp) {
         this.title = title;
         this.description = description;
         this.author = author;
+        this.image = image;
+        this.timestamp = timestamp;
+    }
+
+    // Normal
+    public Article(String title, String description, String author, String timestamp) {
+        this.title = title;
+        this.description = description;
+        this.author = author;
+        this.timestamp = timestamp;
     }
 
     public String getTitle() {
@@ -42,12 +51,30 @@ public class Article {
         this.author = author;
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public String getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(String timestamp) {
+        this.timestamp = timestamp;
+    }
+
     @Override
     public String toString() {
-        return "Article{" +
+        return "Article {" +
                 "title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", author='" + author + '\'' +
+                ", image='" + image + '\'' +
+                ", timestamp='" + timestamp + '\'' +
                 '}';
     }
 }
