@@ -15,7 +15,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -26,6 +29,7 @@ import com.ramirez.fernando.technews.model.Article;
 import com.ramirez.fernando.technews.adapter.ArticlesAdapter;
 import com.ramirez.fernando.technews.R;
 import com.ramirez.fernando.technews.util.Print;
+import com.ramirez.fernando.technews.view.login.LoginActivity;
 import com.ramirez.fernando.technews.view.newArticle.NewArticle;
 
 import java.util.ArrayList;
@@ -97,6 +101,11 @@ public class NewsActivity extends AppCompatActivity {
             case R.id.action_new_article:
                 startActivity(new Intent(this, NewArticle.class));
                 return true;
+            case R.id.action_sign_out:
+                FirebaseAuth auth = FirebaseAuth.getInstance();
+                auth.signOut();
+                startActivity(new Intent(NewsActivity.this, LoginActivity.class));
+                finish();
         }
 
         return super.onOptionsItemSelected(item);
@@ -138,7 +147,7 @@ public class NewsActivity extends AppCompatActivity {
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 Print.log("postComments:onCancelled" + databaseError.toException());
-                Toast.makeText(getApplicationContext(), "Failed to load comments.",
+                Toast.makeText(getApplicationContext(), "Failed to load articles.",
                         Toast.LENGTH_SHORT).show();
             }
         };
